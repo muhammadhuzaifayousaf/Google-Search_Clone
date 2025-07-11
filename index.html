@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./assets/google-favicon.png">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const appsIcon = document.querySelector(".apps-icon");
+            const appsMenu = document.querySelector(".apps-menu");
+
+            if (appsIcon && appsMenu) {
+                appsIcon.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    appsMenu.classList.toggle("show");
+                });
+
+                document.addEventListener("click", function (e) {
+                    if(!appsMenu.contains(e.target) && !appsIcon.contains(e.target)) {
+                        appsMenu.classList.remove("show");
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header" style="font-size: 18px; padding: 24px 32px;">
+        <a href="https://mail.google.com/mail/?authuser=0&ogbl">Gmail</a>
+        <a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a>
+        <img src="./assets/search-lab.png" alt="search-labs" class="icon" />
+        <img src="./assets/nine-dots.png" alt="dots" class="icon apps-icon" />
+    <div class="apps-menu">
+        <div class="apps-grid">
+            <div class="app">
+                <img src="./assets/profile.png" alt="Profile" class="app-icon" style="border-radius: 50%;" />
+                <span>Account</span>
+            </div>
+            <div class="app">
+                <img src="./assets/gmail.png" alt="Gmail" class="app-icon" />
+                <span>Gmail</span>
+            </div>
+            <div class="app">
+                <img src="./assets/google-drive.png" alt="Drive" class="app-icon" />
+                <span>Drive</span>
+            </div>
+            <div class="app">
+                <img src="./assets/google-maps.png" alt="Maps" class="app-icon" />
+                <span>Maps</span>
+            </div>
+            <div class="app">
+                <img src="./assets/youtube.png" alt="YouTube" class="app-icon" />
+                <span>Youtube</span>
+            </div>
+            <div class="app">
+                <img src="./assets/google business profile manager.jpg" alt="Business" class="app-icon" />
+                <span>Business</span>
+            </div>
+            <div class="app">
+                <img src="./assets/google-calendar.png" alt="Calender" class="app-icon" />
+                <span>Calender</span>
+            </div>
+            <div class="app">
+                <img src="./assets/G.png" alt="Search" class="app-icon" />
+                <span>Search</span>
+            </div>
+            <div class="app">
+                <img src="./assets/gemini.png" alt="Gemini" class="app-icon" />
+                <span>Gemini</span>
+            </div>
+        </div>
+    </div>
+        <img src="./assets/profile.png" alt="profile" class="profile-icon" />
+    </div>
+    <main class="main">
+    <img src="./assets/google.png" alt="google" class="logo" />
+    <div class="search-box">
+        <img src="./assets/search.png" alt="Search" class="icon">
+        <input type="text" />
+        <div class="icons" >
+            <img src="./assets/voice.png" alt="Mic" class="icon">
+            <img src="./assets/Google_Lens_Icon.svg" alt="Google-lens" class="icon">
+        </div>
+    </div>    
+    
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+    <div class="language-option">
+        <span>Google offered in: </span>
+        <a href="#" > اردو</a>
+        <a href="#" > پشتو</a> 
+    </div>
+    </main>
+    <footer class="footer">
+    <div class="footer-top">Pakistan</div>
+    <hr class="footer-line" />
+    <div class="footer-bottom">
+        <div class="footer-links-left">
+            <a href="https://about.google/?utm_source=google-PK&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+            <a href="https://www.google.com/intl/en_pk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+            <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+        </div>
+        <div class="footer-links-right">
+            <a href="https://policies.google.com/privacy?hl=en-PK&fg=1">Privacy</a>
+            <a href="https://policies.google.com/terms?hl=en-PK&fg=1">Terms</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
